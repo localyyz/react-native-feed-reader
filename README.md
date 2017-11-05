@@ -1,5 +1,11 @@
 # react-native-get-started
 
+### Note from Localyyz
+
+All code written against this repository will not be used by Localyyz Inc in any
+way. All code are for educational purpose only, and will be freely available in
+the public domain.
+
 React native get started tutorial.
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
