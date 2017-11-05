@@ -1,4 +1,4 @@
-# react-native-get-started
+# react-native-feed-reader
 
 ### Note from Localyyz
 
@@ -6,7 +6,17 @@ All code written against this repository will not be used by Localyyz Inc in any
 way. All code are for educational purpose only, and will be freely available in
 the public domain.
 
-React native get started tutorial.
+
+Purpose of this project is to implement a working RSS feed reader with basic
+functions such as:
+
+1. add / remove *.rss feeds
+2. parse and display titles, thumbnails etc.
+3. open and navigate to content within the news reader
+4. keep track of unread count since last opened
+5. parse and categorize news stories
+
+==============
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
