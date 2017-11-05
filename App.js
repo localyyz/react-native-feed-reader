@@ -1,7 +1,9 @@
 import React from "react"
 
+import { Provider } from "mobx-react"
 import { StackNavigator } from "react-navigation"
 import { Home, Feed } from "scenes"
+import stores from "stores"
 
 const AppNavigator = StackNavigator(
   {
@@ -15,6 +17,10 @@ const AppNavigator = StackNavigator(
 
 export default class App extends React.Component {
   render() {
-    return <AppNavigator />
+    return (
+      <Provider {...stores} suppressChangedStoreWarning>
+        <AppNavigator />
+      </Provider>
+    )
   }
 }
