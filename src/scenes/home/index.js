@@ -1,15 +1,18 @@
 import React from "react"
 
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { observer, inject } from "mobx-react"
 
 // Home shows collection of user's feeds
+@inject("feedStore")
+@observer
 class Home extends React.Component {
-  static navigationOptions = ({ navigationOptions }) => {
+  static navigationOptions = ({ navigation, navigationOptions }) => {
     return {
       ...navigationOptions,
       headerTitle: "Home",
       headerRight: (
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => navigation.navigate("Feed") }>
           <View style={styles.rightNav}>
             <Text>Add Feed</Text>
           </View>
@@ -19,9 +22,15 @@ class Home extends React.Component {
   }
 
   render() {
+    const { navigation } = this.props
     return (
       <View style={styles.container}>
         <Text>This scene will display user added feeds</Text>
+        <TouchableOpacity onPress={ () => navigation.navigate("Feed") } >
+          <View>
+            <Text>Go to the feed</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     )
   }

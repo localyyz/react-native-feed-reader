@@ -5,9 +5,24 @@ import { StackNavigator } from "react-navigation"
 import { Home, Feed } from "scenes"
 import stores from "stores"
 
-const AppNavigator = StackNavigator(
+const HomeNavigator = StackNavigator(
   {
     Home: { screen: Home },
+    Home2: { screen: Home },
+  },
+  { 
+    headerMode: "none",
+    navigationOptions: ({ navigation, navigationOptions }) => {
+        return {
+          ...navigationOptions,
+        }
+    }
+  },
+)
+
+const AppNavigator = StackNavigator(
+  {
+    Home: { screen: HomeNavigator },
     Feed: { screen: Feed }
   },
   {

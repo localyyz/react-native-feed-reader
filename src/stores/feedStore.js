@@ -4,13 +4,14 @@
 import { action, observable, extendObservable } from "mobx"
 
 class FeedStore {
+  // feeds the user has added
   @observable feeds = []
 
   // add a new feed
-  @action addFeed(url = "") {}
+  @action addFeed(feed = {}) {}
 
   // remove a feed
-  @action removeFeed(url = "") {}
+  @action removeFeed(name = "") {}
 }
 
 export default FeedStore
